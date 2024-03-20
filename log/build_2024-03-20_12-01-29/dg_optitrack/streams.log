@@ -1,0 +1,22 @@
+[0.862s] Invoking command in '/home/sofia/subscriber/src/dg_optitrack': PYTHONPATH=/home/sofia/subscriber/build/dg_optitrack/prefix_override:/home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/dg_optitrack build --build-base /home/sofia/subscriber/build/dg_optitrack/build install --record /home/sofia/subscriber/build/dg_optitrack/install.log --install-scripts $base/lib/dg_optitrack --single-version-externally-managed
+[0.988s] running egg_info
+[0.989s] writing ../../build/dg_optitrack/dg_optitrack.egg-info/PKG-INFO
+[0.989s] writing dependency_links to ../../build/dg_optitrack/dg_optitrack.egg-info/dependency_links.txt
+[0.989s] writing entry points to ../../build/dg_optitrack/dg_optitrack.egg-info/entry_points.txt
+[0.989s] writing requirements to ../../build/dg_optitrack/dg_optitrack.egg-info/requires.txt
+[0.989s] writing top-level names to ../../build/dg_optitrack/dg_optitrack.egg-info/top_level.txt
+[1.009s] reading manifest file '../../build/dg_optitrack/dg_optitrack.egg-info/SOURCES.txt'
+[1.009s] writing manifest file '../../build/dg_optitrack/dg_optitrack.egg-info/SOURCES.txt'
+[1.010s] running build
+[1.010s] running build_py
+[1.010s] running install
+[1.010s] running install_lib
+[1.011s] running install_data
+[1.011s] running install_egg_info
+[1.012s] removing '/home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages/dg_optitrack-0.0.0-py3.8.egg-info' (and everything under it)
+[1.012s] Copying ../../build/dg_optitrack/dg_optitrack.egg-info to /home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages/dg_optitrack-0.0.0-py3.8.egg-info
+[1.013s] running install_scripts
+[1.022s] Installing publisher script to /home/sofia/subscriber/install/dg_optitrack/lib/dg_optitrack
+[1.022s] Installing subscriber script to /home/sofia/subscriber/install/dg_optitrack/lib/dg_optitrack
+[1.022s] writing list of installed files to '/home/sofia/subscriber/build/dg_optitrack/install.log'
+[1.033s] Invoked command in '/home/sofia/subscriber/src/dg_optitrack' returned '0': PYTHONPATH=/home/sofia/subscriber/build/dg_optitrack/prefix_override:/home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/dg_optitrack build --build-base /home/sofia/subscriber/build/dg_optitrack/build install --record /home/sofia/subscriber/build/dg_optitrack/install.log --install-scripts $base/lib/dg_optitrack --single-version-externally-managed

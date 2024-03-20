@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/dg_optitrack/dg_optitrack.egg-info/PKG-INFO
+writing dependency_links to ../../build/dg_optitrack/dg_optitrack.egg-info/dependency_links.txt
+writing entry points to ../../build/dg_optitrack/dg_optitrack.egg-info/entry_points.txt
+writing requirements to ../../build/dg_optitrack/dg_optitrack.egg-info/requires.txt
+writing top-level names to ../../build/dg_optitrack/dg_optitrack.egg-info/top_level.txt
+reading manifest file '../../build/dg_optitrack/dg_optitrack.egg-info/SOURCES.txt'
+writing manifest file '../../build/dg_optitrack/dg_optitrack.egg-info/SOURCES.txt'
+running build
+running build_py
+copying dg_optitrack/subscriber.py -> /home/sofia/subscriber/build/dg_optitrack/build/lib/dg_optitrack
+copying dg_optitrack/publisher.py -> /home/sofia/subscriber/build/dg_optitrack/build/lib/dg_optitrack
+running install
+running install_lib
+copying /home/sofia/subscriber/build/dg_optitrack/build/lib/dg_optitrack/subscriber.py -> /home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages/dg_optitrack
+copying /home/sofia/subscriber/build/dg_optitrack/build/lib/dg_optitrack/publisher.py -> /home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages/dg_optitrack
+byte-compiling /home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages/dg_optitrack/subscriber.py to subscriber.cpython-38.pyc
+byte-compiling /home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages/dg_optitrack/publisher.py to publisher.cpython-38.pyc
+running install_data
+copying package.xml -> /home/sofia/subscriber/install/dg_optitrack/share/dg_optitrack
+running install_egg_info
+removing '/home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages/dg_optitrack-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/dg_optitrack/dg_optitrack.egg-info to /home/sofia/subscriber/install/dg_optitrack/lib/python3.8/site-packages/dg_optitrack-0.0.0-py3.8.egg-info
+running install_scripts
+Installing listener script to /home/sofia/subscriber/install/dg_optitrack/lib/dg_optitrack
+Installing talker script to /home/sofia/subscriber/install/dg_optitrack/lib/dg_optitrack
+writing list of installed files to '/home/sofia/subscriber/build/dg_optitrack/install.log'

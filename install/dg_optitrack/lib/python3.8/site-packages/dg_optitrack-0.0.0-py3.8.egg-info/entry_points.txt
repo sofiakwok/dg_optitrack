@@ -1,0 +1,4 @@
+[console_scripts]
+publisher = dg_optitrack.publisher:main
+subscriber = dg_optitrack.subscriber:main
+
