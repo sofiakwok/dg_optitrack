@@ -1,6 +1,0 @@
-source;share/dg_optitrack/hook/pythonpath.ps1
-source;share/dg_optitrack/hook/pythonpath.dsv
-source;share/dg_optitrack/hook/pythonpath.sh
-source;share/dg_optitrack/hook/ament_prefix_path.ps1
-source;share/dg_optitrack/hook/ament_prefix_path.dsv
-source;share/dg_optitrack/hook/ament_prefix_path.sh
