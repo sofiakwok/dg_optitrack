@@ -7,6 +7,8 @@ from geometry_msgs.msg import Point
 from geometry_msgs.msg import Quaternion
 from mocap4r2_msgs.msg import RigidBodies
 
+from dg_optitrack.kalman_filter import Filter
+
 # RigidBody data specs:
 # std_msgs/Header header
 # uint32 frame_number
@@ -19,7 +21,8 @@ class MinimalSubscriber(Node):
 
     def __init__(self):
         super().__init__('minimal_subscriber')
-        self.last_pose = np.array2string(np.array([0, 0, 0, 0, 0, 0, 0]), formatter={'float_kind':lambda x: "%.2f" % x})
+        self.last_pose = np.array([0, 0, 0, 0, 0, 0, 0])
+        self.poses = np.zeros((4, 7))
         self.streaming_id = "1049"
         self.subscription = self.create_subscription(
             RigidBodies,
@@ -27,6 +30,7 @@ class MinimalSubscriber(Node):
             self.listener_callback,
             10)  #queue list
         self.subscription  # prevent unused variable warning
+        self.filter = Filter()
 
     def listener_callback(self, msg):
         #self.get_logger().info('I heard: "%s"' % msg.rigidbodies)
@@ -35,20 +39,17 @@ class MinimalSubscriber(Node):
                 position = np.array([body.pose.position.x, body.pose.position.y, body.pose.position.z])
                 # quaternion - x y z w
                 orientation = np.array([body.pose.orientation.x, body.pose.orientation.y, body.pose.orientation.z, body.pose.orientation.w])
-                self.last_pose = np.array2string(np.concatenate((position, orientation), axis=None))
+                self.last_pose = np.concatenate((position, orientation), axis=None)
+        self.filter.update_measurement(self.last_pose)
 
     def signal(self):
         return self.last_pose
     
     def velocity(self):
-        velocity = self.vel_filter()
+        estimate = self.filter.estimate()
+        velocity = estimate[6:]
         return velocity
-    
-    def vel_filter(self):
-        return None
 
-
-# rclpy.Node.Subscriber('/mocap4r2_optitrack_driver/RigidBody/pose', Pose, some_callback)
 
 def main(args=None):
     rclpy.init(args=args)
