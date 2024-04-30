@@ -6,3 +6,5 @@ To run code:
 4. Source mocap4r2_ws/install/setup.bash (needed to get RigidBodies data type)
 5. Source dg_optitrack/install/setup.bash
 6. ros2 run dg_optitrack subscriber
+
+To rebuild repository: ```colcon build``` in root directory (dg_optitrack)
