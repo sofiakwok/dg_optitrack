@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-
+import time
 import numpy as np
 from geometry_msgs.msg import Pose
 from geometry_msgs.msg import Point
@@ -14,7 +14,7 @@ from dg_optitrack.kalman_filter import Filter
 # uint32 frame_number
 # mocap4r2_msgs/RigidBody[] rigidbodies
 
-#Biped: streaming ID 1049
+# Biped: streaming ID 1049
 # rigid_body publishes information type [mocap4r2_msgs/msg/RigidBodies]
 
 class MinimalSubscriber(Node):
@@ -56,7 +56,12 @@ def main(args=None):
 
     minimal_subscriber = MinimalSubscriber()
 
-    rclpy.spin(minimal_subscriber)
+    #rclpy.spin(minimal_subscriber)
+
+    for i in range(200):
+        #time.sleep(0.01)
+        rclpy.spin_once(minimal_subscriber, timeout_sec = 0.01)
+        print(minimal_subscriber.signal())
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
