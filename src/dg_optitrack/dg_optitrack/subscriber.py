@@ -40,15 +40,15 @@ class MinimalSubscriber(Node):
                 # quaternion - x y z w
                 orientation = np.array([body.pose.orientation.x, body.pose.orientation.y, body.pose.orientation.z, body.pose.orientation.w])
                 self.last_pose = np.concatenate((position, orientation), axis=None)
-        self.filter.update_measurement(self.last_pose)
+        #self.filter.update_measurement(self.last_pose)
 
     def signal(self):
         return self.last_pose
     
-    def velocity(self):
-        estimate = self.filter.estimate()
-        velocity = estimate[6:]
-        return velocity
+    # def velocity(self):
+    #     estimate = self.filter.estimate()
+    #     velocity = estimate[6:]
+    #     return velocity
 
 
 def main(args=None):
