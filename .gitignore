@@ -1,3 +1,4 @@
 build/*
 install/*
 log/*
+src/dg_optitrack/dg_optitrack/__pycache__/*
